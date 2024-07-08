@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 소스 버전 (애플리케이션 서버 호스팅) -->
+<!-- <script src='/ch07/jquery/jquery-3.7.1.js'></script> -->
+
+<!-- 압축 버젼 (애플리케이션 서버 호스팅) -->
+<!-- <script src='/ch07/jquery/jquery-3.7.1.min.js'></script> -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+// 버젼 확인
+console.log(jQuery().jquery);
+
+window.addEventListener('load', function(){
+	var $obj = jqery('h1');
+	
+	setTimeout(function() {
+	console.log(
+			typeof(jquery), // jQuery는 function 객체 
+			typeof($obj), // object 타입의 객체를 반환한다.
+			"length:" + $obj.length,
+			$obj instanceof(Array) // 하지만, 배열은 아니다. (유사 배열) 
+	);
+	
+	$obj.css('color', 'red');
+},2000);
+})
+</script>
+</head>
+<body>
+	<h1>jQuery 로딩</h1>
+</body>
+</html>
+ 
